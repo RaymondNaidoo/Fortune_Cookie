@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fortune Cookie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <main class="app" role="main">
+      <h1 class="title" aria-label="Fortune Cookie">Fortune Cookie</h1>
+
+      <section class="cookie-stage" aria-describedby="instructions">
+        <div class="cookie" id="cookie" role="img" aria-label="A fortune cookie ready to crack">
+          <div class="cookie-shadow" aria-hidden="true"></div>
+          <div class="cookie-half left" id="cookie-left" aria-hidden="true"></div>
+          <div class="cookie-half right" id="cookie-right" aria-hidden="true"></div>
+
+          <div class="fortune-paper" id="fortune-paper" aria-hidden="true">
+            <span class="fortune-text" id="fortune-text"></span>
+          </div>
+          <div class="sparkles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <p id="instructions" class="sr-only">Press the button to crack the cookie and reveal a random fortune.</p>
+      </section>
+
+      <div class="controls">
+        <button id="crack-btn" class="btn" type="button" aria-controls="fortune-text">
+          Crack the Cookie
+        </button>
+      </div>
+
+      <div class="sr-only" aria-live="polite" aria-atomic="true" id="live-region"></div>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
